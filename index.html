@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <script src="jspdf.min.js"></script>
+        <script src="jspdf.plugin.autotable.js"></script>
+        <script src="jspdf.plugin.grafic.js"></script>
+
+
+        <script>
+
+            
+               var doc = new jsPDF('p', 'mm', 'Legal');
+               doc.GrafPie(50,0, 0,[10,10,10,10,10],'donut');
+               window.open(doc.output('datauristring'), '_blank', '');
+        </script>
+        
+    </body>
+</html>
