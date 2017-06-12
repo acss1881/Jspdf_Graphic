@@ -1,5 +1,5 @@
 /** 
- * jsPDF Grafic plugin v0.0.1
+ * jsPDF Graphic plugin v0.0.1
  * Copyright (c) 2017 Arturo Schloss,
  * Name: Arturo Schloss  
  * city: Panamá +507
