@@ -16,7 +16,7 @@
 
             
                var doc = new jsPDF('p', 'mm', 'Legal');
-               doc.GraphicPie(50,0, 0,[10,10,10,10,10],'donut');
+               doc.GraphicPie(50,20, 20,[10,10,10,10,10],'donut');
                // doc.GraphicPie(50,0, 0,[10,10,10,10,10],'pie');
                window.open(doc.output('datauristring'), '_blank', '');
         </script>
