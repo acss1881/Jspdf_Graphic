@@ -11,14 +11,26 @@
         <script src="jspdf.plugin.autotable.js"></script>
         <script src="jspdf.plugin.graphic.js"></script>
 
-
+        <iframe id="pdf" src="" frameborder="0" width="700" height="800"></iframe>
         <script>
 
-            
+                var pdf = document.getElementById('pdf');
                var doc = new jsPDF('p', 'mm', 'Legal');
                doc.GraphicPie(50,20, 20,[10,10,10,10,10],'donut');
-               // doc.GraphicPie(50,0, 0,[10,10,10,10,10],'pie');
-               window.open(doc.output('datauristring'), '_blank', '');
+               doc.GraphicPie(50,20, 125,[10,10,10,10,10],'pie');
+
+
+               doc.setFillColor(255, 134, 190);
+               doc.circleTextCenter(22, 120, 20, '' )
+               doc.setFillColor(165, 0, 0);
+                doc.setDrawColor(255, 134, 190);
+                doc.setTextColor(255);
+               doc.circleTextCenter(20, 122, 21, ['HOLA', 'MUNDO'] )
+
+               doc.setFillColor(255, 134, 190);
+                doc.setDrawColor(165, 0, 0);
+               doc.rectText(120, 50, 35, 10, 'Hola Mundo')
+               pdf.src = doc.output('datauristring');
         </script>
         
     </body>

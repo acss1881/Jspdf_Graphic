@@ -131,6 +131,17 @@
         this.setLineWidth(0);
     }
 
+    jsPDF.API.circleTextCenter = function (radio, marginLeft, marginTop, text ) {
+        this.circle(marginLeft + radio , marginTop + (radio/2), radio, 'FD');
+        this.autoTableText( text, marginLeft + radio, marginTop + (radio / 2), { valign: 'middle', halign: 'center' });
+    }
+
+    jsPDF.API.rectText = function(marginLeft, marginTop, ancho_cuadro, alto_cuadro, text) {
+        this.rect(marginLeft, marginTop, ancho_cuadro, alto_cuadro, 'FD');
+        this.autoTableText( text, marginLeft + ( ancho_cuadro / 2), marginTop + (alto_cuadro / 2) , { valign: 'middle', halign: 'center' });
+    }
+
+
 }));
 
 
